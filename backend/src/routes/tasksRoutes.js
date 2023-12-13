@@ -9,7 +9,9 @@ const authMiddleware = require("../middlewares/authMiddleware");
 taskRoutes.get("/tasks", tasksController.getAll);
 taskRoutes.post(
   "/tasks",
-  authMiddleware.validateToken,
+  
+  //Validação de token desativada até implementação da v2.0 do frontend
+  // authMiddleware.validateToken,
   taskMiddleware.validateFieldTitle,
   tasksController.createTask
 );
