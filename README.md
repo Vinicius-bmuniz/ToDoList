@@ -80,9 +80,11 @@ npm start
 ```
 
 Ou para iniciar o backend em modo de desenvolvimento, utilize o comando abaixo.
+
 ```NPM Config
 npm run dev
 ```
+
 *O modo de desenvolvimento utiliza o nodemon*
 
 O projeto utiliza o banco de dados relacional MySQL.
@@ -94,7 +96,9 @@ Crie um container Docker utilizando uma imagem do MySQL utilizando o comando aba
 ```Dockerfile
 docker run --name [container_name] -e MYSQL_ROOT_PASSWORD=[password] -p 3306:3306 -d mysql
 ```
+
 *Substitua o "[container_name]" para nomear o container*
+
 *Substitua o "[password]" pela senha de sua preferência*
 
 Com isso seu container Docker estará criado e executando em segundo plano.
@@ -104,7 +108,9 @@ Agora precisamos criar nosso banco de dados e suas tabelas, utilizando o arquivo
 ```Dockerfile
 docker exec -i [container_name] mysql -u root -p[password] <./backend/sqlCommand.sql
 ```
+
 *Substitua o "[container_name]" pelo nome do seu container*
+
 *Substitua o "[password]" pela senha que você utilizou para criar o container*
 
 Abra o arquivo "index.html" disponível na pasta > "./frontend/index.html"
